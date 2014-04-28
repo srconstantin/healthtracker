@@ -1,0 +1,9 @@
+{% if latest_days_list %}
+    <ul>
+    {% for day in latest_days_list %}
+        <li><a href="/tracker/{{ day.id }}/">{{ day.date }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No days tracked.</p>
+{% endif %}
